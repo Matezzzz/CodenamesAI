@@ -1,4 +1,3 @@
-from turtle import color
 from board import Board
 from common import *
 from datasets import ModelInitializer

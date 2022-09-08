@@ -1,4 +1,3 @@
-from multiprocessing.sharedctypes import Value
 from common import *
 
 from board import Board
