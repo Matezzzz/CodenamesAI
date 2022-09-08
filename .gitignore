@@ -1,0 +1,6 @@
+/data/coca/files/wlp*/*.txt
+/data/coca/zip/wlp*.zip
+/data/coca/lemmas_all.txt
+/data/*.txt
+/data/fasttext/*.vec
+__pycache__/*
