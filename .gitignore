@@ -4,3 +4,4 @@
 /data/*.txt
 /data/fasttext/*.vec
 __pycache__/*
+/data/*.npy
