@@ -1,8 +1,9 @@
-/data/coca/files/wlp*/*.txt
-/data/coca/zip/wlp*.zip
+/data_original/coca/files/wlp*/*.txt
+/data_original/coca/zip/wlp*.zip
 /data/coca/lemmas_all.txt
 /data/associations/data.txt
 /data/*.txt
 /data/fasttext/*.vec
 __pycache__/*
 /data/*.npy
+/data/data.zip
