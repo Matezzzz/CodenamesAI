@@ -19,7 +19,7 @@ The UI is really simple - all cards that we know the color of are colored, if th
 
 ## Running
 
-In addition to the source code available here, you need to download the required datasets. These can be downloaded here : [mega.nz](https://mega.nz/file/w9cAHCaa#0JxkJar4sUgGQPSSJGBdvPiC8cwzfCCj8D2HVh7OcH0). They should be unzipped, and pasted into the project directory. (if */project/main.py* is the path to the main file, */project/data/* directory should exist too, and contain *word_associations.npy*, *board_words_en.txt* and other files)
+In addition to the source code available here, you need to download the required datasets. These can be downloaded here : [mega.nz](https://mega.nz/file/w9cAHCaa#0JxkJar4sUgGQPSSJGBdvPiC8cwzfCCj8D2HVh7OcH0). They should be unzipped, and pasted into the project directory. (if */project/main.py* is the path to the main file, */project/data/* directory should exist too, and contain *word_associations_en_board.npy*, *board_words_en.txt* and other files)
 
 After that, run the *main.py* python file in the project directory to run the app.
 
