@@ -76,3 +76,8 @@
  * 🟩 All played turns that a human participated in are recorded and saved, for future evaluation
  * 🟦 Basic python - colored word grid in the command line. Input is done using the command line as well, hints are given as a string and a number, and guesses are given as lists of words. Easy to play and implement.
  * 🟨 Actual UI, use the web one from the master's thesis or make my own in pygame
+
+
+
+ ### Cool ideas for the future
+ * GPT-3 + prompts
