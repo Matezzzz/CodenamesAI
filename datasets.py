@@ -1,7 +1,6 @@
 import typing
 from common import *
 import io
-from scipy.spatial.distance import cosine as cosine_dist
 
 
 #base class for all initializers
@@ -33,7 +32,7 @@ class ModelInitializer:
 
     #return a new weights array matching the dictionary, with given value
     def newWeights(self, dictionary : Dictionary, default = 0.0):
-        return np.ones(dictionary.weights_size) * default
+        return np.full(dictionary.weights_size, default)
 
     #divide weights by their largest value. Can be overriden in child classes
     def transformWeights(self, weights):
