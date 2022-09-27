@@ -48,7 +48,7 @@ class HumanCaptainPlayer(CaptainPlayer):
         while True:
             hint = input ("The hint to give: ")
             hint_i = dictionary.hintWordI(hint)
-            if hint_i != -1:
+            if hint_i is not None:
                 break
             else:
                 print ("This word isn't in the dictionary - AI models cannot guess based on it, try another one. Sorry :(")
@@ -110,6 +110,7 @@ class AIAgentPlayer(AgentPlayer):
     
     #use the agent model to guess a word
     def guessWord(self, board : Board, hint : Hint, remaining_guesses : int):
+        if remaining_guesses == 1: return None
         return self.model.guess(board, hint)
     
 

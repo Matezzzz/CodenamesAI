@@ -61,6 +61,7 @@ class AgentModel (Model):
         else:
             return np.argmax(word_weights)
 
+
 #AI captain model
 class CaptainModel (Model):
     def __init__(self, initializer : ModelInitializer, hint_mode = "score", reveal_hinted=False):
@@ -70,7 +71,7 @@ class CaptainModel (Model):
 
     #give a hint for the given team
     def giveHint(self, team : int, board : Board) -> Hint:
-        word_weights = board.getWeights(self.weights, 0.0)
+        word_weights = board.getCaptainWeights(self.weights, 0.0)
         if self.hint_mode == "score":
             #we assume agent will pick the words from the most probable one to the least probable one - get the indices of sorted array, separately for each hint
             sorted_indices = np.argsort(word_weights, 0)[::-1]

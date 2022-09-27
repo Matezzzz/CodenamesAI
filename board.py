@@ -100,12 +100,16 @@ class Board:
         return sum(1 for c in self.cards if c.role == role)
     
     #get weights for all hints and cards on board
-    def getWeights(self, weights, hidden_val = 0.0):
+    def getCaptainWeights(self, weights, hidden_val = 0.0):
         #return weights if card is hidden, else hidden val
-        weights = np.array([weights[c.word_i] if c.hidden else np.full([dictionary.hint_word_count], hidden_val) for c in self.cards])
+        weights = self.getWeights(weights, hidden_val)
         #set all disabled hints as hidden
         weights[:, self.disabled_hints] = hidden_val
         return weights
+    
+    def getWeights(self, weights, hidden_val = 0.0):
+        #return weights if card is hidden, else hidden val
+        return np.array([weights[c.word_i] if c.hidden else np.full([dictionary.hint_word_count], hidden_val) for c in self.cards])
     
     #get scores for all board cards, based on the team currently playing
     def getScores(self, team : int, scoring : CardScoring = CardScoring.Default()):

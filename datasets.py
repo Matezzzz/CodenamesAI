@@ -173,6 +173,15 @@ class CombinedInitializer(ModelInitializer):
         for w, i in zip(self.weights, self.initializers):
             weights += i.getWeights(dictionary) * w
         return weights
+    
+    DEFAULT_FASTTEXT_THRESHOLD = 0.685
+    @staticmethod
+    def DefaultInitializer(fast_text_threshold = DEFAULT_FASTTEXT_THRESHOLD):
+        #create a combined initializer from all basic datasets
+        basic = CombinedInitializer([WordCollocationsInitializer(), SentenceCollocationsInitializer(), FastTextInitializer(fast_text_threshold), WordAssociationInitializer()], [1, 0.5, 0.75, 1])
+
+        #create a combined dataset of the basic dataset and the double link initializer of the basic dataset
+        return CombinedInitializer([basic, DoubleLinkInitializer(basic)], [1.0, 1.0])
 
 
 
